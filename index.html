@@ -116,9 +116,31 @@
     <section class="section container" aria-labelledby="contact-heading">
       <div class="contact">
         <h2 id="contact-heading">Contact</h2>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/27609055948" target="_blank" rel="noopener">+27 60 905 5948</a></p>
-        <p><strong>Email:</strong> <a href="mailto:mkprowrite@gmail.com">mkprowrite@gmail.com</a></p>
-        <p><strong>Location:</strong> South Africa — Online Services</p>
+
+        <!-- Contact form powered by FormSubmit.co -->
+        <form id="contact-form" action="https://formsubmit.co/mkprowrite@gmail.com" method="POST" accept-charset="UTF-8">
+          <!-- Recommended hidden inputs for FormSubmit.co -->
+          <input type="hidden" name="_subject" value="New message from your website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="/thank-you.html" />
+
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" id="submit-btn">Send message</button>
+          </div>
+
+          <p id="form-status" class="hidden" aria-live="polite"></p>
+        </form>
+
+        <p class="muted">Or message us directly on WhatsApp: <a href="https://wa.me/27609055948" target="_blank" rel="noopener">+27 60 905 5948</a></p>
       </div>
     </section>
   </main>
@@ -127,9 +149,6 @@
     <p>&copy; <span id="year">2025</span> Mk ProWrite</p>
   </footer>
 
-  <script>
-    // Set year dynamically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
