@@ -1,25 +1,31 @@
-# Mk ProWrite — Website (Static)
+# mkprowrite
 
-What you have
-- index.html — the main page (SEO meta + Open Graph + structured data)
-- styles.css — external stylesheet
-- script.js — client-side form handler (uses FormSubmit.co)
-- thank-you.html — page shown after a successful contact form submit (used by FormSubmit _next)
+mkprowrite — project repository.
 
-Contact form (working)
-- The contact form on the site submits to FormSubmit.co and will send messages to mkprowrite@gmail.com.
-- Form action used: https://formsubmit.co/mkprowrite@gmail.com
-- First time you use FormSubmit.co it may send a verification email to mkprowrite@gmail.com — follow the instructions in that email to enable delivery.
+## Open Graph image added
 
-Preview locally
-1. Save the files in the repository and open `index.html` in a browser, or run a local server:
-   - Python 3: `python -m http.server 8000` then open `http://localhost:8000`
+An Open Graph image (og-image.svg) has been added to improve link previews when the site is shared. The image is 1200x630 and is referenced from index.html via the following URL:
 
-Publish with GitHub Pages
-1. Go to your repository on GitHub → Settings → Pages.
-2. Under "Source" select Branch: `main` and Folder: `/ (root)` then Save.
-3. Wait a few minutes for GitHub to publish. The site will be available at: https://makonitafadzwa0-cpu.github.io/mkprowrite/
+https://makonitafadzwa0-cpu.github.io/mkprowrite/og-image.svg
 
-Notes
-- When hosted on GitHub Pages the contact form will still work with FormSubmit.co because the form submission is made directly to their endpoint.
-- If you prefer a different form provider (Formspree, Netlify Forms, or a small serverless function), I can update the site accordingly.
+Meta tags added/updated in index.html:
+- link rel="canonical" set to the GitHub Pages site URL
+- og:image set to the hosted og-image.svg with og:image:width and og:image:height
+- Twitter card (summary_large_image) added
+- JSON-LD "url" updated to the GitHub Pages URL
+
+## GitHub Pages
+
+To publish the site via GitHub Pages:
+
+1. Go to the repository Settings > Pages.
+2. Under "Source", select the branch `main` (or your default branch) and the folder (root or /docs) where the site is located.
+3. Save. Your site will be available at:
+
+   https://makonitafadzwa0-cpu.github.io/mkprowrite/
+
+If your default branch is not `main`, choose the correct branch in the Pages settings.
+
+---
+
+If you'd like changes to the image design, different filenames, or to host the image in a subdirectory, tell me how you'd like it adjusted and I will update the files.

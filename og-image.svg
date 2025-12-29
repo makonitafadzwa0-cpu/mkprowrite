@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">mkprowrite Open Graph Image</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5a4" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <g fill="#ffffff" font-family="Arial, Helvetica, sans-serif" text-anchor="start">
+    <text x="80" y="220" font-size="64" font-weight="700">mkprowrite</text>
+    <text x="80" y="300" font-size="32" opacity="0.95">Open Graph image for GitHub Pages</text>
+  </g>
+  <!-- simple badge -->
+  <circle cx="1040" cy="110" r="70" fill="#ffffff" opacity="0.08" />
+  <text x="980" y="130" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">mk</text>
+</svg>
