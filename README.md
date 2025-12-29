@@ -4,15 +4,12 @@ What you have
 - index.html — the main page (SEO meta + Open Graph + structured data)
 - styles.css — external stylesheet
 - script.js — client-side form handler (uses FormSubmit.co)
+- thank-you.html — page shown after a successful contact form submit (used by FormSubmit _next)
 
 Contact form (working)
 - The contact form on the site submits to FormSubmit.co and will send messages to mkprowrite@gmail.com.
 - Form action used: https://formsubmit.co/mkprowrite@gmail.com
 - First time you use FormSubmit.co it may send a verification email to mkprowrite@gmail.com — follow the instructions in that email to enable delivery.
-
-Quick edits you should make (optional)
-- Replace `https://example.com/` and `https://example.com/og-image.jpg` in the meta tags / JSON-LD with your real domain and image URL (recommended for social sharing).
-- Replace the email address if you prefer a different contact email.
 
 Preview locally
 1. Save the files in the repository and open `index.html` in a browser, or run a local server:
