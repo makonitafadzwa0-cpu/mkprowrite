@@ -1,0 +1,60 @@
+/* Mk ProWrite — styles.css */
+:root{
+  --bg: #f4f6f8;
+  --header-gradient-start: #0f2027;
+  --header-gradient-mid: #203a43;
+  --header-gradient-end: #2c5364;
+  --accent: #25d366;
+  --muted: #6b7b84;
+  --card-bg: #ffffff;
+  --radius: 12px;
+  --container-w: 1100px;
+  --shadow: 0 5px 15px rgba(0,0,0,0.08);
+  --text: #23303a;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:var(--container-w);margin:0 auto;padding:24px}
+
+/* Header */
+.site-header{background:linear-gradient(135deg,var(--header-gradient-start),var(--header-gradient-mid),var(--header-gradient-end));color:#fff;padding:48px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--container-w);margin:0 auto;padding:0 24px}
+.brand{margin:0;font-size:1.4rem}
+.tagline{margin:6px 0 0;color:rgba(255,255,255,0.9);font-size:0.98rem}
+.btn{display:inline-block;background:var(--accent);color:#05281b;padding:12px 20px;border-radius:30px;text-decoration:none;font-weight:700;border:0}
+
+/* Sections */
+.section{padding:48px 0}
+h2{text-align:center;margin:0 0 30px;color:var(--header-gradient-mid)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card-bg);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center}
+.card h3{margin:0 0 12px;color:var(--header-gradient-end)}
+.card p{margin:0;color:var(--muted)}
+
+/* About / Pricing / Contact */
+.about, .pricing, .contact{background:var(--card-bg);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow)}
+ul{padding-left:18px;margin:12px 0}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:18px}
+.price-card{border:1px solid #e6e9eb;border-radius:12px;padding:22px;text-align:center;background:linear-gradient(180deg,#ffffff,#fbfdff)}
+.price{font-size:1.25rem;font-weight:700;margin:12px 0;color:var(--header-gradient-mid)}
+
+/* Footer */
+.site-footer{background:var(--header-gradient-mid);color:#fff;text-align:center;padding:20px 10px;margin-top:36px}
+
+/* Responsive */
+@media (max-width:800px){
+  .header-inner{flex-direction:column;align-items:flex-start;padding:16px}
+  .cta-wrap{align-self:stretch}
+  .brand{font-size:1.25rem}
+}
