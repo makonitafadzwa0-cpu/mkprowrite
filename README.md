@@ -1,31 +1,34 @@
-# mkprowrite
+DNS / GitHub Pages setup for mkprowrites.com
 
-mkprowrite — project repository.
+This repository is configured to publish the site at a custom domain: mkprowrites.com. The repository contains a CNAME file with the domain name.
 
-## Open Graph image added
+DNS configuration (recommended):
 
-An Open Graph image (og-image.svg) has been added to improve link previews when the site is shared. The image is 1200x630 and is referenced from index.html via the following URL:
+1) Add A records for the root/apex domain (@) to point to GitHub Pages IP addresses:
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
 
-https://makonitafadzwa0-cpu.github.io/mkprowrite/og-image.svg
+2) Add a CNAME record for the www subdomain:
+   - Host/Name: www
+   - Type: CNAME
+   - Value/Target: makonitafadzwa0-cpu.github.io
 
-Meta tags added/updated in index.html:
-- link rel="canonical" set to the GitHub Pages site URL
-- og:image set to the hosted og-image.svg with og:image:width and og:image:height
-- Twitter card (summary_large_image) added
-- JSON-LD "url" updated to the GitHub Pages URL
+3) If your DNS provider supports ALIAS or ANAME records, you can use an ALIAS/ANAME for the root domain pointing to makonitafadzwa0-cpu.github.io instead of multiple A records.
 
-## GitHub Pages
+4) After updating DNS, go to this repository's Settings -> Pages (or Pages section in repository settings) and set the custom domain to:
+   mkprowrites.com
 
-To publish the site via GitHub Pages:
+5) Enable "Enforce HTTPS" once the certificate has been issued. It can take some time (usually up to an hour, sometimes longer) for the TLS certificate to be provisioned. DNS propagation may take up to 48 hours in some cases.
 
-1. Go to the repository Settings > Pages.
-2. Under "Source", select the branch `main` (or your default branch) and the folder (root or /docs) where the site is located.
-3. Save. Your site will be available at:
+Verification and troubleshooting:
+- Use dig or nslookup to confirm the A records and CNAME:
+  dig +short mkprowrites.com A
+  dig +short www.mkprowrites.com CNAME
 
-   https://makonitafadzwa0-cpu.github.io/mkprowrite/
+- If you see issues after DNS changes, ensure there are no conflicting DNS records (for example, an A record for www while also having a CNAME for www), and clear any CDN or local caches.
 
-If your default branch is not `main`, choose the correct branch in the Pages settings.
-
----
-
-If you'd like changes to the image design, different filenames, or to host the image in a subdirectory, tell me how you'd like it adjusted and I will update the files.
+Notes:
+- The repository already includes a CNAME file with the custom domain (CNAME).
+- If you prefer a different configuration (only CNAME, different target, or additional guidance), tell me what you'd like and I can update these files.
